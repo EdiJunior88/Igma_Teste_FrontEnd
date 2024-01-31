@@ -1,6 +1,12 @@
+import Header from "@/components/Header" 
+import Section from "@/components/Section"
+
 const index = () => {
   return (
-    <div>index</div>
+    <div>
+      <Header />
+      <Section />
+    </div>
   )
 }
 
