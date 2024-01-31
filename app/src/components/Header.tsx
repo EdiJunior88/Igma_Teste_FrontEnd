@@ -6,14 +6,8 @@ const Header = () => {
   return (
     <>
       <header className="flex items-center justify-between h-20 sm:pr-6 xl:pr-20">
-        <ImageComponent src={Logo} alt="logo svg" width="120px" height="42px" />
-        <ImageComponent
-          src={Avatar}
-          alt="avatar"
-          width="40px"
-          height="40px"
-          className="rounded-full"
-        />
+        <ImageComponent src={Logo} alt="logo svg" />
+        <ImageComponent src={Avatar} alt="avatar" className="rounded-full" />
       </header>
     </>
   );
