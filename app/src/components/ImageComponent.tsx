@@ -1,10 +1,18 @@
 import { InterfaceImageComponent } from "@/Interface/Interface";
 
-const ImageComponent = ({ src, alt, width, height, className }: InterfaceImageComponent) => {
+const ImageComponent = ({
+  src,
+  alt,
+  className,
+}: InterfaceImageComponent) => {
   return (
-    <div>
-      <img src={src} alt={alt} width={width} height={height} className={className} />
-    </div>
+    <>
+      <img
+        src={src}
+        alt={alt}
+        className={className}
+      />
+    </>
   );
 };
 

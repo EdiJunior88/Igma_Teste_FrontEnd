@@ -5,7 +5,7 @@ import Avatar from "@/assets/avatar.png";
 const Header = () => {
   return (
     <>
-      <div className="flex items-center justify-between h-20 pr-6">
+      <header className="flex items-center justify-between h-20 sm:pr-6 xl:pr-20">
         <ImageComponent src={Logo} alt="logo svg" width="120px" height="42px" />
         <ImageComponent
           src={Avatar}
@@ -14,7 +14,7 @@ const Header = () => {
           height="40px"
           className="rounded-full"
         />
-      </div>
+      </header>
     </>
   );
 };

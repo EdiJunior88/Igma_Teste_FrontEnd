@@ -1,7 +1,10 @@
 export interface InterfaceImageComponent {
   src: string;
   alt: string;
-  width: string;
-  height: string;
+  className?: string;
+}
+
+export interface InterfaceTextComponent {
+  text: string;
   className?: string;
 }
