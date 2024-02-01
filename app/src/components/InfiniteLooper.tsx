@@ -30,9 +30,9 @@ function InfiniteLooper({
 
     const { height } = innerRef.current.getBoundingClientRect();
 
-    if (height === 0) {
+    if (height === 0 || innerRef.current.children.length === 0) {
       return;
-    }
+     }
 
     const { height: parentHeight } = outerRef.current.getBoundingClientRect();
 
