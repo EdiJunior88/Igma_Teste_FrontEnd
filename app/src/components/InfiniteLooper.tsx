@@ -29,15 +29,20 @@ function InfiniteLooper({
     if (!innerRef?.current || !outerRef?.current) return;
 
     const { height } = innerRef.current.getBoundingClientRect();
-    
-    const { height: parentWidth } = outerRef.current.getBoundingClientRect();
 
-    const widthDeficit = parentWidth - height;
+    const { height: parentHeight } = outerRef.current.getBoundingClientRect();
+
+    const heightDeficit = parentHeight - height;
 
     const instanceWidth = height / innerRef.current.children.length;
 
-    if (widthDeficit) {
-      setLooperInstances(Math.max(1, looperInstances + Math.ceil(widthDeficit / instanceWidth) + 1));
+    if (heightDeficit) {
+      setLooperInstances(
+        Math.max(
+          1,
+          looperInstances + Math.ceil(heightDeficit / instanceWidth) + 1
+        )
+      );
     }
 
     resetAnimation();
