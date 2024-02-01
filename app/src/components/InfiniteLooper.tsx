@@ -30,17 +30,21 @@ function InfiniteLooper({
 
     const { height } = innerRef.current.getBoundingClientRect();
 
+    if (height === 0) {
+      return;
+    }
+
     const { height: parentHeight } = outerRef.current.getBoundingClientRect();
 
     const heightDeficit = parentHeight - height;
 
-    const instanceWidth = height / innerRef.current.children.length;
+    const instanceHeight = height / innerRef.current.children.length;
 
     if (heightDeficit) {
       setLooperInstances(
         Math.max(
           1,
-          looperInstances + Math.ceil(heightDeficit / instanceWidth) + 1
+          looperInstances + Math.ceil(heightDeficit / instanceHeight) + 1
         )
       );
     }
@@ -53,7 +57,7 @@ function InfiniteLooper({
     parent = 1700
   */
 
-  useEffect(() => setupInstances(), [setupInstances]);
+  useEffect(setupInstances, [setupInstances]);
 
   useEffect(() => {
     window.addEventListener("resize", setupInstances);
