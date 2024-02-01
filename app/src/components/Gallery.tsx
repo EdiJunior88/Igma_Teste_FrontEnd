@@ -9,17 +9,22 @@ import ImageCelular5 from "@/assets/celular5.webp";
 import ImageCelular6 from "@/assets/celular6.webp";
 
 const Gallery = () => {
+  const images = [
+    ImageCelular1,
+    ImageCelular2,
+    ImageCelular3,
+    ImageCelular4,
+    ImageCelular5,
+    ImageCelular6,
+    ImageCelular1,
+  ];
+
   return (
-    <div className="flex overflow-hidden">
-      <div className="column">
-        <div className="flex flex-col image-container move-up gap-[47px]">
-          <ImageComponent src={ImageCelular1} alt="imagem celular" />
-          <ImageComponent src={ImageCelular2} alt="imagem celular" />
-          <ImageComponent src={ImageCelular3} alt="imagem celular" />
-          <ImageComponent src={ImageCelular4} alt="imagem celular" />
-          <ImageComponent src={ImageCelular5} alt="imagem celular" />
-          <ImageComponent src={ImageCelular6} alt="imagem celular" />
-        </div>
+    <div className="gallery-container">
+      <div className="image-container">
+        {images.map((image, index) => (
+          <ImageComponent key={index} src={image} alt="imagem celular" />
+          ))}
       </div>
     </div>
   );
