@@ -9,7 +9,7 @@ function InfiniteLooper({
   direction: "down" | "up";
   children: React.ReactNode;
 }) {
-  const [looperInstances, setLooperInstances] = useState(3);
+  const [looperInstances, setLooperInstances] = useState(1);
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
@@ -30,18 +30,18 @@ function InfiniteLooper({
 
     const { height } = innerRef.current.getBoundingClientRect();
 
-    const { height: parentWidth } = outerRef.current.getBoundingClientRect();
+    const { height: parentHeight } = outerRef.current.getBoundingClientRect();
 
-    const widthDeficit = parentWidth - height;
+    const heightDeficit = parentHeight - height;
 
-    const instanceWidth =
+    const instanceHeight =
       innerRef.current.children.length !== 0
         ? height / innerRef.current.children.length
         : 0;
 
-    if (widthDeficit) {
+    if (heightDeficit) {
       setLooperInstances(
-        looperInstances + Math.ceil(widthDeficit / instanceWidth) + 1
+        looperInstances + Math.ceil(heightDeficit / instanceHeight) + 1
       );
     }
 
@@ -66,7 +66,7 @@ function InfiniteLooper({
   return (
     <div className="looper" ref={outerRef}>
       <div className="looper__innerList" ref={innerRef} data-animate="true">
-        {[...Array(looperInstances)].map((_, ind) => (
+        {[...Array(looperInstances)].map((ind) => (
           <div
             key={ind}
             className="looper__listInstance"
