@@ -29,11 +29,8 @@ function InfiniteLooper({
     if (!innerRef?.current || !outerRef?.current) return;
 
     const { height } = innerRef.current.getBoundingClientRect();
-
     const { height: parentHeight } = outerRef.current.getBoundingClientRect();
-
     const heightDeficit = parentHeight - height;
-
     const instanceHeight =
       innerRef.current.children.length !== 0
         ? height / innerRef.current.children.length
@@ -47,7 +44,7 @@ function InfiniteLooper({
     }
 
     resetAnimation();
-  }, []);
+  }, [looperInstances]);
 
   /*
     6 instances, 200 each = 1200
