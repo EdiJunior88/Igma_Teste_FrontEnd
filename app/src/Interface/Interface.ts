@@ -8,3 +8,17 @@ export interface InterfaceTextComponent {
   text: string;
   className?: string;
 }
+
+export interface InterfaceInputComponent {
+  label: string;
+  name: string;
+  id: string;
+  type: string;
+  className?: string;
+}
+
+export interface InterfaceButtonComponent {
+  type?: "submit" | "reset" | "button";
+  text: string;
+  className?: string;
+}

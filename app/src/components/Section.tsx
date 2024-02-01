@@ -1,7 +1,7 @@
 import ImageComponent from "./ImageComponent";
 import TextComponent from "./TextComponent";
 import Vector from "@/assets/vetorImage.svg";
-import ImageSection from "@/assets/Image.png";
+import ImageLavaSection from "@/assets/Image.png";
 import LogoIgma from "@/assets/logotipoIgma.svg";
 import LogoAmbev from "@/assets/ambev.svg";
 import LogoBayer from "@/assets/bayer.svg";
@@ -14,6 +14,8 @@ import LogoHSL from "@/assets/hsl.svg";
 import LogoIDB from "@/assets/idb.svg";
 import LogoMRV from "@/assets/mrv.svg";
 import LogoNeoEnergetica from "@/assets/neoenergia.svg";
+import InputComponent from "./InputComponent";
+import ButtonComponent from "./ButtonComponent";
 
 const Section = () => {
   const textIntro = "Prazer, somos";
@@ -23,49 +25,56 @@ const Section = () => {
     "Unimos design e tecnologia para resolver problemas complexos de empresas. Criamos produtos digitais que revolucionam o relacionamento entre empresas e consumidores.";
   const textDescriptionCompanies =
     "Expressamos mais de 20 anos de experiência criando plataformas digitais para as maiores empresas do Brasil, impactando milhões de pessoas.";
+  const textTitleNewsletter = "Assine nossa newsletter";
+  const textDescriptionNewsletter =
+    "Desenvolva-se conosco com conteúdos sobre  Tecnologia e Design a cada 15 dias.";
+  const textNomeNewsletter = "Nome";
+  const textEmailNewsletter = "Email";
 
   return (
     <>
-      <section className="sm:grid sm:grid-cols-2 sm:grid-flow-row-dense auto-rows-auto justify-center content-center items-center">
-        <div className="sm:grid sm:grid-cols-2 sm:col-span-2 sm:px-24 sm:pt-[120px]">
-          <div className="relative mx-auto">
+      <section className="xl:grid xl:grid-cols-2 xl:grid-flow-row-dense auto-rows-auto justify-center content-center items-center">
+        <div className="xl:grid xl:grid-cols-2 xl:col-span-2 xl:px-[102px] xl:pt-[120px]">
+          <div className="relative">
             <ImageComponent
-              src={ImageSection}
+              src={ImageLavaSection}
               alt="image lava"
-              className="sm:w-[422px] sm:h-[680px] 2xl:w-[525px]"
+              className="xl:w-[422px] xl:h-[680px]"
             />
             <ImageComponent
               src={Vector}
               alt="vector svg"
-              className="absolute left-[-18px] top-[173px] sm:w-[60px]"
+              className="absolute left-[-18px] top-[173px] xl:w-[60px]"
             />
           </div>
 
-          <div className="min-w-[384px] w-[531px] max-w-[663px]">
+          <div className="xl:w-[531px]">
             <div className="flex items-center gap-2">
               <TextComponent text={textIntro} className="text-sm" />
               <ImageComponent
                 src={LogoIgma}
                 alt="logo igma svg"
-                className="sm:w-[72px]"
+                className="xl:w-[72px]"
               />
             </div>
             <TextComponent
               text={textDescription}
-              className="text-[40px] font-semibold pt-16 pb-8 m-0"
+              className="text-[40px] font-semibold pt-[64px] pb-[48px] m-0"
             />
             <TextComponent
               text={textSubDescription}
-              className="text-2xl leading-[150%] m-0"
+              className="text-[24px] leading-[150%] m-0"
             />
           </div>
         </div>
 
-        <div className="sm:grid sm:grid-cols-2 sm:col-span-2 items-center sm:py-[43px]">
-          <TextComponent
-            text={textDescriptionCompanies}
-            className="text-2xl text-left font-semibold leading-[150%] sm:w-[421px] h-[15px]"
-          />
+        <div className="xl:grid xl:grid-cols-2 xl:col-span-2 items-center xl:py-[43px]">
+          <div className="xl:w-[421px]">
+            <TextComponent
+              text={textDescriptionCompanies}
+              className="text-2xl text-left font-semibold leading-[150%]"
+            />
+          </div>
           <div className="grid grid-cols-3 auto-rows-auto grid-flow-row-dense justify-center content-center items-start">
             <ImageComponent src={LogoAmbev} alt="logo ambev svg" />
             <ImageComponent src={LogoBayer} alt="logo bayer svg" />
@@ -81,6 +90,40 @@ const Section = () => {
               src={LogoNeoEnergetica}
               alt="logo neoenergetica svg"
             />
+          </div>
+        </div>
+
+        <div className="xl:grid xl:grid-cols-2 xl:col-span-2 items-center xl:py-[43px]">
+          <div className="xl:grid xl:grid-cols-1">
+            <TextComponent
+              text={textTitleNewsletter}
+              className="text-[16px] text-left font-semibold leading-[150%]"
+            />
+            <TextComponent
+              text={textDescriptionNewsletter}
+              className="text-[24px] text-left font-semibold leading-[150%] xl:py-[48px]"
+            />
+
+            <form>
+              <InputComponent
+                label={textNomeNewsletter}
+                type="text"
+                name="name"
+                id="name"
+                className="relative h-[64px] border-4 border-transparent border-b-slate-900 bg-transparent pl-[55px]"
+              />
+              <div className="xl:pt-[24px] xl:pb-[56px]">
+                <InputComponent
+                  label={textEmailNewsletter}
+                  type="email"
+                  name="name"
+                  id="name"
+                  className="relative h-[64px] border-4 border-transparent border-b-slate-900 bg-transparent pl-[55px]"
+                />
+              </div>
+
+              <ButtonComponent type="submit" text="Assinar" />
+            </form>
           </div>
         </div>
       </section>

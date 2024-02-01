@@ -5,7 +5,7 @@ const index = () => {
   return (
     <div className="font-plusjacarta">
       <Header />
-      <div className="mx-auto sm:px-6 xl:px-16">
+      <div className="mx-auto xl:mx-[72px]">
         <Section />
       </div>
     </div>
