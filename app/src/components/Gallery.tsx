@@ -26,7 +26,7 @@ const Gallery = () => {
           <ImageComponent
             key={index}
             src={image}
-            alt={`imagem celular`}
+            alt={`imagem celular ${index + 1}`}
             className="image-component"
           />
         ))}
@@ -37,7 +37,7 @@ const Gallery = () => {
           <ImageComponent
             key={index}
             src={image}
-            alt={`imagem celular`}
+            alt={`imagem celular ${index + 1}`}
             className="image-component"
           />
         ))}

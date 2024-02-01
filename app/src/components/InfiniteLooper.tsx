@@ -34,7 +34,10 @@ function InfiniteLooper({
 
     const widthDeficit = parentWidth - height;
 
-    const instanceWidth = height / innerRef.current.children.length;
+    const instanceWidth =
+      innerRef.current.children.length !== 0
+        ? height / innerRef.current.children.length
+        : 0;
 
     if (widthDeficit) {
       setLooperInstances(
