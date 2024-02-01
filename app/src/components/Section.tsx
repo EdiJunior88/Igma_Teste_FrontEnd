@@ -1,4 +1,5 @@
 import { Formik } from "formik";
+import { InterfaceFormik } from "@/Interface/Interface";
 
 import ImageComponent from "./ImageComponent";
 import TextComponent from "./TextComponent";
@@ -18,7 +19,6 @@ import LogoMRV from "@/assets/mrv.svg";
 import LogoNeoEnergetica from "@/assets/neoenergia.svg";
 import InputComponent from "./InputComponent";
 import ButtonComponent from "./ButtonComponent";
-import { InterfaceFormik } from "@/Interface/Interface";
 
 const Section = () => {
   const textIntro = "Prazer, somos";
@@ -85,9 +85,9 @@ const Section = () => {
             <ImageComponent src={LogoComgas} alt="logo comgas svg" />
             <ImageComponent src={LogoCVC} alt="logo cvc svg" />
             <ImageComponent src={LogoGoogle} alt="logo google svg" />
+            <ImageComponent src={LogoIDB} alt="logo idb svg" />
             <ImageComponent src={LogoHonda} alt="logo honda svg" />
             <ImageComponent src={LogoHSL} alt="logo hsl svg" />
-            <ImageComponent src={LogoIDB} alt="logo idb svg" />
             <ImageComponent src={LogoMRV} alt="logo mrv svg" />
             <ImageComponent
               src={LogoNeoEnergetica}
