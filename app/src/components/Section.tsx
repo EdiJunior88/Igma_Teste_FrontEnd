@@ -4,7 +4,7 @@ import { InterfaceFormik } from "@/Interface/Interface";
 import ImageComponent from "./ImageComponent";
 import TextComponent from "./TextComponent";
 import Vector from "@/assets/vetorImage.svg";
-import ImageLavaSection from "@/assets/Image.png";
+import ImageLavaSection from "@/assets/Image.webp";
 import LogoIgma from "@/assets/logotipoIgma.svg";
 import LogoAmbev from "@/assets/ambev.svg";
 import LogoBayer from "@/assets/bayer.svg";
@@ -19,6 +19,7 @@ import LogoMRV from "@/assets/mrv.svg";
 import LogoNeoEnergetica from "@/assets/neoenergia.svg";
 import InputComponent from "./InputComponent";
 import ButtonComponent from "./ButtonComponent";
+import Gallery from "./Gallery";
 
 const Section = () => {
   const textIntro = "Prazer, somos";
@@ -182,6 +183,10 @@ const Section = () => {
                 </form>
               )}
             </Formik>
+          </div>
+
+          <div>
+            <Gallery />
           </div>
         </div>
       </section>

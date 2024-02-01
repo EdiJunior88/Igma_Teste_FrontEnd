@@ -1,0 +1,38 @@
+.column {
+  width: 25%;
+  overflow: hidden;
+}
+
+.image-container {
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Animação para mover as imagens para cima */
+.move-up {
+  animation-name: moveUp;
+}
+
+/* Animação para mover as imagens para baixo */
+.move-down {
+  animation-name: moveDown;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

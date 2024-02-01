@@ -1,6 +1,6 @@
 import ImageComponent from "@/components/ImageComponent";
 import Logo from "@/assets/LogoHeader.svg";
-import Avatar from "@/assets/avatar.png";
+import Avatar from "@/assets/avatar.webp";
 
 const Header = () => {
   return (
