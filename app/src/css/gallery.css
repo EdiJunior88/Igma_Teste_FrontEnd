@@ -1,28 +1,28 @@
 /* Looper styles */
 @keyframes slideAnim {
   from {
-     transform: translateY(0%);
+    transform: translateY(0%);
   }
   to {
-     transform: translateY(-100%);
+    transform: translateY(-100%);
   }
- }
- 
+}
+
 .looper {
-  width: 100%;
   height: 100vh;
+
   overflow: hidden;
 }
 
 .looper__innerList {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: fit-content;
+  flex-direction: column;
+
 }
 
 .looper__innerList[data-animate="true"] .looper__listInstance {
-  animation: slideAnim linear infinite;
+  animation: slideAnim linear infinite;   
 }
 
 .looper__listInstance {

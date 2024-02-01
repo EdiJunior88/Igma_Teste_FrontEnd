@@ -7,6 +7,7 @@ import ImageCelular3 from "@/assets/celular3.webp";
 import ImageCelular4 from "@/assets/celular4.webp";
 import ImageCelular5 from "@/assets/celular5.webp";
 import ImageCelular6 from "@/assets/celular6.webp";
+import InfiniteLooper from "./InfiniteLooper";
 
 const Gallery = () => {
   const images = [
@@ -16,16 +17,42 @@ const Gallery = () => {
     ImageCelular4,
     ImageCelular5,
     ImageCelular6,
-    ImageCelular1,
   ];
 
   return (
-    <div className="gallery-container">
-      <div className="image-container">
+    <div className="flex">
+      <InfiniteLooper speed={30} direction="up">
         {images.map((image, index) => (
-          <ImageComponent key={index} src={image} alt="imagem celular" />
-          ))}
-      </div>
+          <ImageComponent
+            key={index}
+            src={image}
+            alt={`imagem celular ${index + 1}`}
+            className="image-component"
+          />
+        ))}
+      </InfiniteLooper>
+
+      <InfiniteLooper speed={20} direction="down">
+        {images.map((image, index) => (
+          <ImageComponent
+            key={index}
+            src={image}
+            alt={`imagem celular ${index + 1}`}
+            className="image-component"
+          />
+        ))}
+      </InfiniteLooper>
+
+      <InfiniteLooper speed={40} direction="up">
+        {images.map((image, index) => (
+          <ImageComponent
+            key={index}
+            src={image}
+            alt={`imagem celular ${index + 1}`}
+            className="image-component"
+          />
+        ))}
+      </InfiniteLooper>
     </div>
   );
 };
