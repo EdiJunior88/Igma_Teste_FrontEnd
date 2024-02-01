@@ -6,13 +6,22 @@ const InputComponent = ({
   id,
   type,
   className,
+  value,
+  onChange
 }: InterfaceInputComponent) => {
   return (
     <>
       <label htmlFor={id}>
         <div className="flex flex-col justify-center">
           <div className="absolute">{label}</div>
-          <input type={type} name={name} id={id} className={className} />
+          <input
+            type={type}
+            name={name}
+            id={id}
+            className={className}
+            value={value}
+            onChange={onChange}
+          />
         </div>
       </label>
     </>

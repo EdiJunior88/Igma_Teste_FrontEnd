@@ -1,3 +1,5 @@
+import { Formik } from "formik";
+
 import ImageComponent from "./ImageComponent";
 import TextComponent from "./TextComponent";
 import Vector from "@/assets/vetorImage.svg";
@@ -16,6 +18,7 @@ import LogoMRV from "@/assets/mrv.svg";
 import LogoNeoEnergetica from "@/assets/neoenergia.svg";
 import InputComponent from "./InputComponent";
 import ButtonComponent from "./ButtonComponent";
+import { InterfaceFormik } from "@/Interface/Interface";
 
 const Section = () => {
   const textIntro = "Prazer, somos";
@@ -104,26 +107,81 @@ const Section = () => {
               className="text-[24px] text-left font-semibold leading-[150%] xl:py-[48px]"
             />
 
-            <form>
-              <InputComponent
-                label={textNomeNewsletter}
-                type="text"
-                name="name"
-                id="name"
-                className="relative h-[64px] border-4 border-transparent border-b-slate-900 bg-transparent pl-[55px]"
-              />
-              <div className="xl:pt-[24px] xl:pb-[56px]">
-                <InputComponent
-                  label={textEmailNewsletter}
-                  type="email"
-                  name="name"
-                  id="name"
-                  className="relative h-[64px] border-4 border-transparent border-b-slate-900 bg-transparent pl-[55px]"
-                />
-              </div>
+            <Formik
+              initialValues={{ email: "", name: "" }}
+              validate={(values: InterfaceFormik) => {
+                const errors: Partial<InterfaceFormik> = {};
+                if (!values.email || !values.name) {
+                  errors.name = "Nome obrigatório!";
+                  errors.email = "Email obrigatório!";
+                } else if (
+                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                ) {
+                  errors.name = "Nome inválido";
+                  errors.email = "Endereço de email inválido!";
+                }
+                return errors;
+              }}
+              onSubmit={(values, { setSubmitting }) => {
+                setTimeout(() => {
+                  alert("Newsletter assinada com sucesso!");
+                  setSubmitting(false);
+                }, 400);
+                values.email = "";
+                values.name = "";
+              }}>
+              {({ values, errors, handleChange, handleSubmit }) => (
+                <form onSubmit={handleSubmit}>
+                  <InputComponent
+                    label={textNomeNewsletter}
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={values.name}
+                    onChange={handleChange}
+                    className={`relative h-[64px] border-4 ${
+                      errors.name
+                        ? "border-transparent border-b-[#c62828]"
+                        : "border-transparent border-b-[#211e1e]"
+                    } bg-transparent pl-[55px]`}
+                  />
 
-              <ButtonComponent type="submit" text="Assinar" />
-            </form>
+                  {errors.name ? (
+                    <div className="text-[#c62828] text-[14px] font-medium p-1">
+                      {errors.name}
+                    </div>
+                  ) : null}
+
+                  <div className="xl:pt-[24px] xl:pb-[56px]">
+                    <InputComponent
+                      label={textEmailNewsletter}
+                      type="text"
+                      name="email"
+                      id="email"
+                      value={values.email}
+                      onChange={handleChange}
+                      className={`relative h-[64px] border-4 ${
+                        errors.name
+                          ? "border-transparent border-b-[#c62828]"
+                          : "border-transparent border-b-[#211e1e]"
+                      } bg-transparent pl-[55px]`}
+                    />
+
+                    {errors.email ? (
+                      <div className="text-[#c62828] text-[14px] font-medium p-1">
+                        {errors.email}
+                      </div>
+                    ) : null}
+                  </div>
+
+                  <ButtonComponent
+                    type="submit"
+                    text="Assinar"
+                    className="min-w-[160px] h-[56px] text-white bg-[#211e1e] cursor-pointer px-[24px]"
+                  />
+                </form>
+              )}
+            </Formik>
           </div>
         </div>
       </section>
