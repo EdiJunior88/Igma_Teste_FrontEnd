@@ -41,12 +41,13 @@ function InfiniteLooper({
 
     if (heightDeficit) {
       setLooperInstances(
-        looperInstances + Math.ceil(heightDeficit / instanceHeight) + 1
+        (prevInstances) =>
+          prevInstances + Math.ceil(heightDeficit / instanceHeight) + 1
       );
     }
 
     resetAnimation();
-  }, [looperInstances]);
+  }, []);
 
   /*
     6 instances, 200 each = 1200
@@ -66,7 +67,7 @@ function InfiniteLooper({
   return (
     <div className="looper" ref={outerRef}>
       <div className="looper__innerList" ref={innerRef} data-animate="true">
-        {[...Array(looperInstances)].map((ind) => (
+        {[...Array(looperInstances)].map((_, ind) => (
           <div
             key={ind}
             className="looper__listInstance"
