@@ -9,7 +9,7 @@ function InfiniteLooper({
   direction: "down" | "up";
   children: React.ReactNode;
 }) {
-  const [looperInstances, setLooperInstances] = useState(1);
+  const [looperInstances, setLooperInstances] = useState(3);
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
