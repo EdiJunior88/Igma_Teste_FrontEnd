@@ -30,9 +30,9 @@ function InfiniteLooper({
 
     const { height } = innerRef.current.getBoundingClientRect();
 
-    if (height === 0 || innerRef.current.children.length === 0) {
+    if (height === 0) {
       return;
-     }
+    }
 
     const { height: parentHeight } = outerRef.current.getBoundingClientRect();
 
@@ -42,10 +42,7 @@ function InfiniteLooper({
 
     if (heightDeficit) {
       setLooperInstances(
-        Math.max(
-          1,
-          looperInstances + Math.ceil(heightDeficit / instanceHeight) + 1
-        )
+        looperInstances + Math.ceil(heightDeficit / instanceHeight) + 1
       );
     }
 
