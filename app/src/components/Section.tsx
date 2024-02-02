@@ -112,7 +112,7 @@ const Section = () => {
           </div>
         </div>
 
-        <div className="xl:col-span-2 xl:flex xl:items-center xl:justify-between">
+        <div className="xl:col-span-2 xl:flex xl:items-center xl:justify-between xl:pb-16">
           <div className="w-72 xl:col-span-1 xl:flex xl:flex-col">
             <TextComponent
               text={textTitleNewsletter}
