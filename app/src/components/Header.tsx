@@ -5,12 +5,12 @@ import Avatar from "@/assets/avatar.webp";
 const Header = () => {
   return (
     <>
-      <header className="flex items-center justify-between h-20 sm:pr-6 lg:pr-8 xl:pr-20">
-        <ImageComponent src={Logo} alt="logo svg" />
+      <header className="flex h-20 items-center justify-between mb-6 sm:mb-0 pr-5 lg:pr-8 xl:pr-20">
+        <ImageComponent src={Logo} alt="logo svg" className="w-20 sm:w-auto sm:h-auto" />
         <ImageComponent
           src={Avatar}
           alt="avatar"
-          className="rounded-full lg:h-10 xl:h-12"
+          className="h-10 rounded-full lg:h-10 xl:h-12"
         />
       </header>
     </>
