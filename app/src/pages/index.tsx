@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Section from "@/components/Section";
+import Footer from "@/components/Footer";
 
 const index = () => {
   return (
@@ -7,6 +8,7 @@ const index = () => {
       <Header />
       <div className="mx-auto xl:mx-[72px]">
         <Section />
+        <Footer />
       </div>
     </div>
   );

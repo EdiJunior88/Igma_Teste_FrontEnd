@@ -1,6 +1,10 @@
 import { Formik } from "formik";
 import { InterfaceFormik } from "@/Interface/Interface";
 
+import InputComponent from "./InputComponent";
+import ButtonComponent from "./ButtonComponent";
+import Gallery from "./Gallery";
+
 import ImageComponent from "./ImageComponent";
 import TextComponent from "./TextComponent";
 import Vector from "@/assets/vetorImage.svg";
@@ -17,9 +21,6 @@ import LogoHSL from "@/assets/hsl.svg";
 import LogoIDB from "@/assets/idb.svg";
 import LogoMRV from "@/assets/mrv.svg";
 import LogoNeoEnergetica from "@/assets/neoenergia.svg";
-import InputComponent from "./InputComponent";
-import ButtonComponent from "./ButtonComponent";
-import Gallery from "./Gallery";
 
 const Section = () => {
   const textIntro = "Prazer, somos";
@@ -34,6 +35,21 @@ const Section = () => {
     "Desenvolva-se conosco com conteúdos sobre  Tecnologia e Design a cada 15 dias.";
   const textNomeNewsletter = "Nome";
   const textEmailNewsletter = "Email";
+  const TextButtonNewsletter = "Assinar Newsletter";
+
+  const images = [
+    LogoAmbev,
+    LogoBayer,
+    LogoCentauro,
+    LogoComgas,
+    LogoCVC,
+    LogoGoogle,
+    LogoHonda,
+    LogoHSL,
+    LogoIDB,
+    LogoMRV,
+    LogoNeoEnergetica,
+  ];
 
   return (
     <>
@@ -48,7 +64,7 @@ const Section = () => {
             <ImageComponent
               src={Vector}
               alt="vector svg"
-              className="absolute left-[-18px] top-[173px] xl:w-[60px]"
+              className="absolute left-[-18px] top-[261px] xl:w-[60px]"
             />
           </div>
 
@@ -80,25 +96,18 @@ const Section = () => {
             />
           </div>
           <div className="grid grid-cols-3 auto-rows-auto grid-flow-row-dense justify-center content-center items-start">
-            <ImageComponent src={LogoAmbev} alt="logo ambev svg" />
-            <ImageComponent src={LogoBayer} alt="logo bayer svg" />
-            <ImageComponent src={LogoCentauro} alt="logo centauro svg" />
-            <ImageComponent src={LogoComgas} alt="logo comgas svg" />
-            <ImageComponent src={LogoCVC} alt="logo cvc svg" />
-            <ImageComponent src={LogoGoogle} alt="logo google svg" />
-            <ImageComponent src={LogoIDB} alt="logo idb svg" />
-            <ImageComponent src={LogoHonda} alt="logo honda svg" />
-            <ImageComponent src={LogoHSL} alt="logo hsl svg" />
-            <ImageComponent src={LogoMRV} alt="logo mrv svg" />
-            <ImageComponent
-              src={LogoNeoEnergetica}
-              alt="logo neoenergetica svg"
-            />
+            {images.map((image, index) => (
+              <ImageComponent
+                key={index}
+                src={image}
+                alt={`logo empresa ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
 
-        <div className="xl:grid xl:grid-cols-2 xl:col-span-2 items-center xl:py-[43px]">
-          <div className="xl:grid xl:grid-cols-1">
+        <div className="xl:flex xl:col-span-2 justify-between items-center xl:py-[43px]">
+          <div className="xl:flex xl:flex-col xl:col-span-1 w-72">
             <TextComponent
               text={textTitleNewsletter}
               className="text-[16px] text-left font-semibold leading-[150%]"
@@ -177,7 +186,7 @@ const Section = () => {
 
                   <ButtonComponent
                     type="submit"
-                    text="Assinar"
+                    text={TextButtonNewsletter}
                     className="min-w-[160px] h-[56px] text-white bg-[#211e1e] cursor-pointer px-[24px]"
                   />
                 </form>

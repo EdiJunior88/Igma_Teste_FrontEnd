@@ -10,7 +10,6 @@
 
 .looper {
   height: 100vh;
-
   overflow: hidden;
 }
 
@@ -18,16 +17,17 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-
 }
 
 .looper__innerList[data-animate="true"] .looper__listInstance {
-  animation: slideAnim linear infinite;   
+  animation: slideAnim linear infinite;
 }
 
 .looper__listInstance {
   display: flex;
   flex-direction: column;
-  width: max-content;
+  row-gap: 17px;
+  width: 161px;
   animation: none;
+  padding-bottom: 17px;
 }

@@ -20,8 +20,8 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="flex">
-      <InfiniteLooper speed={30} direction="up">
+    <div className="flex gap-x-[17px]">
+      <InfiniteLooper speed={20} direction="up">
         {images.map((image, index) => (
           <ImageComponent
             key={index}
@@ -43,7 +43,18 @@ const Gallery = () => {
         ))}
       </InfiniteLooper>
 
-      <InfiniteLooper speed={40} direction="up">
+      <InfiniteLooper speed={35} direction="up">
+        {images.map((image, index) => (
+          <ImageComponent
+            key={index}
+            src={image}
+            alt={`imagem celular ${index + 1}`}
+            className="image-component"
+          />
+        ))}
+      </InfiniteLooper>
+
+      <InfiniteLooper speed={50} direction="down">
         {images.map((image, index) => (
           <ImageComponent
             key={index}
