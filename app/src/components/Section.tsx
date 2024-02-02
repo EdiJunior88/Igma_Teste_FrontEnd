@@ -31,7 +31,6 @@ const Section = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isMobileView = window.innerWidth >= 300 && window.innerWidth < 1024;
-  console.log(isMobileView);
 
   const textIntro = "Prazer, somos";
   const textDescription =
@@ -69,7 +68,7 @@ const Section = () => {
             <ImageComponent
               src={ImageLavaSection}
               alt="image lava"
-              className="h-[560px] pl-6 lg:h-[504px] xl:h-[680px] xl:w-[422px]"
+              className="h-[560px] ml-6 lg:h-[504px] xl:h-[680px] xl:w-[422px]"
             />
             <ImageComponent
               src={Vector}
