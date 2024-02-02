@@ -15,6 +15,8 @@ export interface InterfaceInputComponent {
   id: string;
   type: string;
   value?: string;
+  placeholder?: string;
+  disabled?: boolean;
   className?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -23,6 +25,7 @@ export interface InterfaceButtonComponent {
   type?: "submit" | "reset" | "button";
   text: string;
   className?: string;
+  disabled?: boolean;
 }
 
 export interface InterfaceFormik {

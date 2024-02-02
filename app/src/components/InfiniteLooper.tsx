@@ -49,9 +49,9 @@ function InfiniteLooper({
 
     resetAnimation();
 
-    console.log("heightDeficit:", heightDeficit);
-    console.log("instanceHeight:", instanceHeight);
-    console.log("looperInstances:", looperInstances);
+    // console.log("heightDeficit:", heightDeficit);
+    // console.log("instanceHeight:", instanceHeight);
+    // console.log("looperInstances:", looperInstances);
   }, [looperInstances]);
 
   /*

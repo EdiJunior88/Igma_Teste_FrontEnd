@@ -7,7 +7,11 @@ const Header = () => {
     <>
       <header className="flex items-center justify-between h-20 sm:pr-6 xl:pr-20">
         <ImageComponent src={Logo} alt="logo svg" />
-        <ImageComponent src={Avatar} alt="avatar" className="rounded-full xl:h-12" />
+        <ImageComponent
+          src={Avatar}
+          alt="avatar"
+          className="rounded-full xl:h-12"
+        />
       </header>
     </>
   );

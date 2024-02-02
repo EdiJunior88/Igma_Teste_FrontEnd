@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { Formik } from "formik";
 import { InterfaceFormik } from "@/Interface/Interface";
 
+/* Components */
 import InputComponent from "./InputComponent";
 import ButtonComponent from "./ButtonComponent";
 import Gallery from "./Gallery";
 
+/* Images */
 import ImageComponent from "./ImageComponent";
 import TextComponent from "./TextComponent";
 import Vector from "@/assets/vetorImage.svg";
@@ -21,8 +24,11 @@ import LogoHSL from "@/assets/hsl.svg";
 import LogoIDB from "@/assets/idb.svg";
 import LogoMRV from "@/assets/mrv.svg";
 import LogoNeoEnergetica from "@/assets/neoenergia.svg";
+import Loading from "@/assets/loading.svg";
 
 const Section = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const textIntro = "Prazer, somos";
   const textDescription =
     "Acreditamos em um mundo onde experiências incríveis são essenciais.";
@@ -53,49 +59,49 @@ const Section = () => {
 
   return (
     <>
-      <section className="xl:grid xl:grid-cols-2 xl:grid-flow-row-dense auto-rows-auto justify-center content-center items-center">
-        <div className="xl:grid xl:grid-cols-2 xl:col-span-2 xl:px-[102px] xl:pt-[120px]">
+      <section className="auto-rows-auto content-center items-center justify-center xl:grid xl:grid-flow-row-dense xl:grid-cols-2">
+        <div className="xl:col-span-2 xl:grid xl:grid-cols-2 xl:px-[102px] xl:pt-[120px]">
           <div className="relative">
             <ImageComponent
               src={ImageLavaSection}
               alt="image lava"
-              className="xl:w-[422px] xl:h-[680px]"
+              className="xl:h-[680px] xl:w-[422px]"
             />
             <ImageComponent
               src={Vector}
               alt="vector svg"
-              className="absolute left-[-18px] top-[261px] xl:w-[60px]"
+              className="absolute xl:left-[-18px] xl:top-[261px] xl:w-[60px]"
             />
           </div>
 
           <div className="xl:w-[531px]">
-            <div className="flex items-center gap-2">
-              <TextComponent text={textIntro} className="text-sm" />
+            <div className="xl:flex xl:items-center xl:gap-4">
+              <TextComponent text={textIntro} className="xl:text-base" />
               <ImageComponent
                 src={LogoIgma}
                 alt="logo igma svg"
-                className="xl:w-[72px]"
+                className="xl:w-20"
               />
             </div>
             <TextComponent
               text={textDescription}
-              className="text-[40px] font-semibold pt-[64px] pb-[48px] m-0"
+              className="xl:m-0 xl:pb-12 xl:pt-16 xl:text-[40px] xl:font-semibold xl:leading-[120%]"
             />
             <TextComponent
               text={textSubDescription}
-              className="text-[24px] leading-[150%] m-0"
+              className="m-0 xl:text-2xl xl:font-semibold xl:leading-[150%]"
             />
           </div>
         </div>
 
-        <div className="xl:grid xl:grid-cols-2 xl:col-span-2 items-center xl:py-[43px]">
+        <div className="items-center xl:col-span-2 xl:grid xl:grid-cols-2 xl:py-[62px]">
           <div className="xl:w-[421px]">
             <TextComponent
               text={textDescriptionCompanies}
-              className="text-2xl text-left font-semibold leading-[150%]"
+              className="xl:text-left xl:text-2xl xl:font-semibold xl:leading-[150%]"
             />
           </div>
-          <div className="grid grid-cols-3 auto-rows-auto grid-flow-row-dense justify-center content-center items-start">
+          <div className="xl:grid xl:grid-flow-row-dense xl:auto-rows-auto xl:grid-cols-3 xl:content-center xl:items-start xl:justify-center">
             {images.map((image, index) => (
               <ImageComponent
                 key={index}
@@ -106,15 +112,15 @@ const Section = () => {
           </div>
         </div>
 
-        <div className="xl:flex xl:col-span-2 justify-between items-center xl:py-[43px]">
-          <div className="xl:flex xl:flex-col xl:col-span-1 w-72">
+        <div className="xl:col-span-2 xl:flex xl:items-center xl:justify-between">
+          <div className="w-72 xl:col-span-1 xl:flex xl:flex-col">
             <TextComponent
               text={textTitleNewsletter}
-              className="text-[16px] text-left font-semibold leading-[150%]"
+              className="xl:text-left xl:text-base xl:font-normal xl:leading-[120%]"
             />
             <TextComponent
               text={textDescriptionNewsletter}
-              className="text-[24px] text-left font-semibold leading-[150%] xl:py-[48px]"
+              className="leading-[150%] xl:py-12 xl:text-left xl:text-2xl xl:font-semibold"
             />
 
             <Formik
@@ -133,13 +139,16 @@ const Section = () => {
                 return errors;
               }}
               onSubmit={(values, { setSubmitting }) => {
+                setIsSubmitting(true);
                 setTimeout(() => {
                   alert("Newsletter assinada com sucesso!");
                   setSubmitting(false);
-                }, 400);
+                  setIsSubmitting(false);
+                }, 4000);
                 values.email = "";
                 values.name = "";
-              }}>
+              }}
+            >
               {({ values, errors, handleChange, handleSubmit }) => (
                 <form onSubmit={handleSubmit}>
                   <InputComponent
@@ -148,47 +157,68 @@ const Section = () => {
                     name="name"
                     id="name"
                     value={values.name}
+                    placeholder="Nome"
+                    disabled={isSubmitting}
                     onChange={handleChange}
-                    className={`relative h-[64px] border-4 ${
+                    className={`relative h-[64px] border-[2px] hover:border-[3px] ${
                       errors.name
                         ? "border-transparent border-b-[#c62828]"
                         : "border-transparent border-b-[#211e1e]"
-                    } bg-transparent pl-[55px]`}
+                    } bg-transparent placeholder:text-[#211e1e]`}
                   />
 
                   {errors.name ? (
-                    <div className="text-[#c62828] text-[14px] font-medium p-1">
+                    <div className="p-1 text-[14px] font-medium text-[#c62828]">
                       {errors.name}
                     </div>
                   ) : null}
 
-                  <div className="xl:pt-[24px] xl:pb-[56px]">
+                  <div className="xl:pb-[56px] xl:pt-[24px]">
                     <InputComponent
                       label={textEmailNewsletter}
                       type="text"
                       name="email"
                       id="email"
                       value={values.email}
+                      placeholder="Email"
+                      disabled={isSubmitting}
                       onChange={handleChange}
-                      className={`relative h-[64px] border-4 ${
+                      className={`relative h-[64px] border-[2px] hover:border-[3px] ${
                         errors.name
                           ? "border-transparent border-b-[#c62828]"
                           : "border-transparent border-b-[#211e1e]"
-                      } bg-transparent pl-[55px]`}
+                      } bg-transparent placeholder:text-[#211e1e]`}
                     />
 
                     {errors.email ? (
-                      <div className="text-[#c62828] text-[14px] font-medium p-1">
+                      <div className="p-1 text-[14px] font-medium text-[#c62828]">
                         {errors.email}
                       </div>
                     ) : null}
                   </div>
 
-                  <ButtonComponent
-                    type="submit"
-                    text={TextButtonNewsletter}
-                    className="min-w-[160px] h-[56px] text-white bg-[#211e1e] cursor-pointer px-[24px]"
-                  />
+                  {isSubmitting ? (
+                    <div className="flex items-center">
+                      <ButtonComponent
+                        type="submit"
+                        text={TextButtonNewsletter}
+                        disabled={isSubmitting}
+                        className="mr-7 h-[56px] min-w-[160px] cursor-pointer bg-[#211e1e] px-[24px] text-white"
+                      />
+                      <ImageComponent
+                        src={Loading}
+                        alt="logo igma svg"
+                        className="xl:w-10"
+                      />
+                    </div>
+                  ) : (
+                    <ButtonComponent
+                      type="submit"
+                      text={TextButtonNewsletter}
+                      disabled={isSubmitting}
+                      className="h-[56px] min-w-[160px] cursor-pointer bg-[#211e1e] px-[24px] text-white"
+                    />
+                  )}
                 </form>
               )}
             </Formik>

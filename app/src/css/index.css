@@ -5,3 +5,12 @@
 p {
   color: #333;
 }
+
+input:disabled {
+  color: #aeaeae;
+  border-bottom-color: #aeaeae;
+}
+
+button:disabled {
+  background: #aeaeae;
+}
