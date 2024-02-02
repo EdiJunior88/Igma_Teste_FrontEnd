@@ -27,7 +27,7 @@ const Gallery = () => {
             key={index}
             src={image}
             alt={`imagem celular ${index + 1}`}
-            className="image-component"
+            className="image-component lg:w-[113px] xl:w-auto"
           />
         ))}
       </InfiniteLooper>
@@ -38,7 +38,7 @@ const Gallery = () => {
             key={index}
             src={image}
             alt={`imagem celular ${index + 1}`}
-            className="image-component"
+            className="image-component lg:w-[113px] xl:w-auto"
           />
         ))}
       </InfiniteLooper>
@@ -49,7 +49,7 @@ const Gallery = () => {
             key={index}
             src={image}
             alt={`imagem celular ${index + 1}`}
-            className="image-component"
+            className="image-component lg:w-[113px] xl:w-auto"
           />
         ))}
       </InfiniteLooper>
@@ -60,7 +60,7 @@ const Gallery = () => {
             key={index}
             src={image}
             alt={`imagem celular ${index + 1}`}
-            className="image-component"
+            className="image-component lg:w-[113px] xl:w-auto"
           />
         ))}
       </InfiniteLooper>

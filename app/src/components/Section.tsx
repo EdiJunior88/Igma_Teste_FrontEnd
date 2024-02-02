@@ -60,48 +60,48 @@ const Section = () => {
   return (
     <>
       <section className="auto-rows-auto content-center items-center justify-center xl:grid xl:grid-flow-row-dense xl:grid-cols-2">
-        <div className="xl:col-span-2 xl:grid xl:grid-cols-2 xl:px-[102px] xl:pt-[120px]">
+        <div className="lg:col-span-2 lg:grid lg:grid-cols-2 lg:px-14 lg:pb-20 lg:pt-6 xl:px-[102px] xl:pt-[120px]">
           <div className="relative">
             <ImageComponent
               src={ImageLavaSection}
               alt="image lava"
-              className="xl:h-[680px] xl:w-[422px]"
+              className="lg:h-[504px] xl:h-[680px] xl:w-[422px]"
             />
             <ImageComponent
               src={Vector}
               alt="vector svg"
-              className="absolute xl:left-[-18px] xl:top-[261px] xl:w-[60px]"
+              className="absolute lg:left-[-18px] lg:top-[174px] lg:w-[60px] xl:top-[261px]"
             />
           </div>
 
-          <div className="xl:w-[531px]">
-            <div className="xl:flex xl:items-center xl:gap-4">
+          <div className="lg:w-[384px] xl:w-[531px]">
+            <div className="lg:flex lg:items-center lg:gap-2 xl:gap-4">
               <TextComponent text={textIntro} className="xl:text-base" />
               <ImageComponent
                 src={LogoIgma}
                 alt="logo igma svg"
-                className="xl:w-20"
+                className="lg:w-[73px] xl:w-20"
               />
             </div>
             <TextComponent
               text={textDescription}
-              className="xl:m-0 xl:pb-12 xl:pt-16 xl:text-[40px] xl:font-semibold xl:leading-[120%]"
+              className="lg:pb-8 lg:pt-16 lg:text-[32px] lg:font-semibold lg:leading-[120%] xl:m-0 xl:pb-12 xl:text-[40px]"
             />
             <TextComponent
               text={textSubDescription}
-              className="m-0 xl:text-2xl xl:font-semibold xl:leading-[150%]"
+              className="m-0 lg:text-base lg:font-semibold lg:leading-[150%] xl:text-2xl"
             />
           </div>
         </div>
 
-        <div className="items-center xl:col-span-2 xl:grid xl:grid-cols-2 xl:py-[62px]">
-          <div className="xl:w-[421px]">
+        <div className="items-center lg:col-span-2 lg:grid lg:grid-cols-2 lg:pb-20 xl:pb-[62px]">
+          <div className="lg:w-[304px] xl:w-[421px]">
             <TextComponent
               text={textDescriptionCompanies}
-              className="xl:text-left xl:text-2xl xl:font-semibold xl:leading-[150%]"
+              className="lg:text-left lg:text-base lg:font-semibold lg:leading-[150%] xl:text-2xl"
             />
           </div>
-          <div className="xl:grid xl:grid-flow-row-dense xl:auto-rows-auto xl:grid-cols-3 xl:content-center xl:items-start xl:justify-center">
+          <div className="lg:grid lg:grid-flow-row-dense lg:auto-rows-auto lg:grid-cols-3 lg:content-center lg:items-start lg:justify-center">
             {images.map((image, index) => (
               <ImageComponent
                 key={index}
@@ -112,15 +112,15 @@ const Section = () => {
           </div>
         </div>
 
-        <div className="xl:col-span-2 xl:flex xl:items-center xl:justify-between xl:pb-16">
-          <div className="w-72 xl:col-span-1 xl:flex xl:flex-col">
+        <div className="lg:col-span-2 lg:flex lg:items-center lg:justify-between lg:pb-20 xl:pb-16">
+          <div className="lg:col-span-1 lg:flex lg:w-[300px] lg:flex-col xl:w-72">
             <TextComponent
               text={textTitleNewsletter}
-              className="xl:text-left xl:text-base xl:font-normal xl:leading-[120%]"
+              className="lg:text-left lg:text-sm lg:font-normal lg:leading-[120%] xl:text-base"
             />
             <TextComponent
               text={textDescriptionNewsletter}
-              className="leading-[150%] xl:py-12 xl:text-left xl:text-2xl xl:font-semibold"
+              className="lg:py-12 lg:text-left lg:text-base lg:font-semibold lg:leading-[150%] xl:text-2xl"
             />
 
             <Formik
@@ -173,7 +173,7 @@ const Section = () => {
                     </div>
                   ) : null}
 
-                  <div className="xl:pb-[56px] xl:pt-[24px]">
+                  <div className="lg:pb-[56px] lg:pt-6">
                     <InputComponent
                       label={textEmailNewsletter}
                       type="text"
@@ -216,7 +216,7 @@ const Section = () => {
                       type="submit"
                       text={TextButtonNewsletter}
                       disabled={isSubmitting}
-                      className="h-[56px] min-w-[160px] cursor-pointer bg-[#211e1e] px-[24px] text-white"
+                      className="cursor-pointer bg-[#211e1e] text-white lg:h-12 lg:min-w-[120px] lg:px-10 lg:text-sm xl:h-14 xl:min-w-[160px] xl:px-12 xl:text-base"
                     />
                   )}
                 </form>
@@ -224,7 +224,7 @@ const Section = () => {
             </Formik>
           </div>
 
-          <div>
+          <div className="lg:w-[542px] xl:w-auto">
             <Gallery />
           </div>
         </div>

@@ -3,7 +3,7 @@ const Footer = () => {
   const textFooterCopyright = "© Copyright 2023";
 
   return (
-    <div className="flex justify-between xl:pb-20 xl:pt-10 xl:text-base xl:font-normal">
+    <div className="flex justify-between lg:pb-20 lg:pt-10 lg:text-sm xl:text-base lg:font-normal">
       <div>{textFooter}</div>
       <div>{textFooterCopyright}</div>
     </div>
