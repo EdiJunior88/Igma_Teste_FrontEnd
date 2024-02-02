@@ -25,9 +25,13 @@ import LogoIDB from "@/assets/idb.svg";
 import LogoMRV from "@/assets/mrv.svg";
 import LogoNeoEnergetica from "@/assets/neoenergia.svg";
 import Loading from "@/assets/loading.svg";
+import GalleryMobile from "./GalleryMobile";
 
 const Section = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const isMobileView = window.innerWidth >= 300 && window.innerWidth < 1024;
+  console.log(isMobileView);
 
   const textIntro = "Prazer, somos";
   const textDescription =
@@ -61,7 +65,7 @@ const Section = () => {
     <>
       <section className="auto-rows-auto content-center items-center justify-center xl:grid xl:grid-flow-row-dense xl:grid-cols-2">
         <div className="flex flex-col lg:col-span-2 lg:grid lg:grid-cols-2 lg:px-14 lg:pb-20 lg:pt-6 xl:px-[102px] xl:pt-[120px]">
-          <div className="relative order-last">
+          <div className="relative order-last lg:order-none">
             <ImageComponent
               src={ImageLavaSection}
               alt="image lava"
@@ -112,8 +116,8 @@ const Section = () => {
           </div>
         </div>
 
-        <div className="mx-6 lg:col-span-2 lg:flex lg:items-center lg:justify-between lg:pb-20 xl:pb-16">
-          <div className="lg:col-span-1 lg:flex lg:w-[300px] lg:flex-col xl:w-72">
+        <div className="lg:col-span-2 lg:flex lg:items-center lg:justify-between lg:pb-20 xl:pb-16">
+          <div className="mx-6 lg:col-span-1 lg:flex lg:w-[300px] lg:flex-col xl:w-72">
             <TextComponent
               text={textTitleNewsletter}
               className="pb-12 pt-20 text-sm font-normal leading-[120%] lg:pb-0 lg:pt-0 lg:text-left lg:text-sm lg:font-normal lg:leading-[120%] xl:text-base"
@@ -224,8 +228,8 @@ const Section = () => {
             </Formik>
           </div>
 
-          <div className="py-20 lg:w-[542px] lg:py-0 xl:w-auto">
-            <Gallery />
+          <div className="pl-6 py-20 lg:w-[542px] lg:py-0 xl:w-auto">
+            {isMobileView ? <GalleryMobile /> : <Gallery />}
           </div>
         </div>
       </section>

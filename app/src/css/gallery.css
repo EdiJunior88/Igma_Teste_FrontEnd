@@ -8,6 +8,15 @@
   }
 }
 
+@keyframes slideAnimMobile {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .looper {
   height: 100vh;
   overflow: hidden;
@@ -30,4 +39,42 @@
   width: 161px;
   animation: none;
   padding-bottom: 17px;
+}
+
+@media ((width>= 360px) and (width < 1024px)) {
+  /* Looper styles */
+  @keyframes slideAnimMobile {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .looper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .looper__innerList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .looper__innerList[data-animate="true"] .looper__listInstance {
+    animation: slideAnimMobile linear infinite;
+  }
+
+  .looper__listInstance {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    gap: 17px;
+    padding-right: 17px;
+    animation: none;
+  }
 }
