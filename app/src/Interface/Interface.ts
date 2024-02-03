@@ -1,3 +1,5 @@
+import { User } from "@/providers/useUser";
+
 export interface InterfaceImageComponent {
   src: string;
   alt: string;
@@ -26,9 +28,22 @@ export interface InterfaceButtonComponent {
   text: string;
   className?: string;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 export interface InterfaceFormik {
   name: string;
   email: string;
+}
+
+export interface InterfaceUseUsers {
+  id: string;
+  name: string;
+  email: string;
+  authToken?: string;
+}
+
+export interface InterfaceAuthContext {
+  user: User | null;
+  setUser: (user: User | null) => void;
 }

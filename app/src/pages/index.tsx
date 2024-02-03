@@ -2,16 +2,23 @@ import Header from "@/components/Header";
 import Section from "@/components/Section";
 import Footer from "@/components/Footer";
 
-const index = () => {
+import { AuthContext } from "@/context/AuthContext";
+import { useAuth } from "@/providers/useAuth";
+
+const Index = () => {
+  const { user, setUser } = useAuth();
+
   return (
-    <div className="font-plusjacarta">
-      <Header />
-      <div className="mx-auto lg:mx-[34px] xl:mx-[72px]">
-        <Section />
-        <Footer />
+    <AuthContext.Provider value={{ user, setUser }}>
+      <div className="font-plusjacarta">
+        <Header />
+        <div className="mx-auto lg:mx-[34px] xl:mx-[72px]">
+          <Section />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </AuthContext.Provider>
   );
 };
 
-export default index;
+export default Index;
