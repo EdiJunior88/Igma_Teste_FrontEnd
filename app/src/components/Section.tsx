@@ -62,13 +62,13 @@ const Section = () => {
 
   return (
     <>
-      <section className="auto-rows-auto content-center items-center justify-center xl:grid xl:grid-flow-row-dense xl:grid-cols-2">
+      <section className="section-animation auto-rows-auto content-center items-center justify-center xl:grid xl:grid-flow-row-dense xl:grid-cols-2">
         <div className="flex flex-col lg:col-span-2 lg:grid lg:grid-cols-2 lg:px-14 lg:pb-20 lg:pt-6 xl:px-[102px] xl:pt-[120px]">
           <div className="relative order-last lg:order-none">
             <ImageComponent
               src={ImageLavaSection}
               alt="image lava"
-              className="h-[560px] ml-6 lg:h-[504px] xl:h-[680px] xl:w-[422px]"
+              className="ml-6 h-[560px] lg:h-[504px] xl:h-[680px] xl:w-[422px]"
             />
             <ImageComponent
               src={Vector}
@@ -227,7 +227,7 @@ const Section = () => {
             </Formik>
           </div>
 
-          <div className="pl-6 py-20 lg:w-[542px] lg:py-0 xl:w-auto">
+          <div className="py-20 pl-6 lg:w-[542px] lg:py-0 xl:w-auto">
             {isMobileView ? <GalleryMobile /> : <Gallery />}
           </div>
         </div>

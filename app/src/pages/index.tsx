@@ -12,7 +12,7 @@ const Index = () => {
     <AuthContext.Provider value={{ user, setUser }}>
       <div className="font-plusjacarta">
         <Header />
-        <div className="mx-auto lg:mx-[34px] xl:mx-[72px]">
+        <div className="mx-auto pt-32 lg:mx-[34px] xl:mx-[72px]">
           <Section />
           <Footer />
         </div>

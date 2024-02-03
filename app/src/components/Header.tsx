@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="mb-6 flex h-20 items-center justify-between pr-5 sm:mb-0 lg:pr-8 xl:pr-20">
+    <header className="fixed top-0 z-10 w-full header-animation mb-6 h-20 bg-transparent flex items-center justify-between pr-5 sm:mb-0 lg:pr-8 xl:pr-20">
         <ImageComponent
           src={Logo}
           alt="logo svg"

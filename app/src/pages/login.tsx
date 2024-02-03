@@ -28,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-animation">
       {user ? (
         <div className="flex h-screen w-full flex-col items-center justify-center gap-10 font-plusjacarta text-xl">
           {" "}
