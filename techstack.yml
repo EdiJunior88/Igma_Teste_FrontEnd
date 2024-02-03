@@ -2,11 +2,11 @@ repo_name: EdiJunior88/Igma_Teste_FrontEnd
 report_id: d64d6ae561aab842fea0997d79c291ba
 version: 0.1
 repo_type: Public
-timestamp: '2024-02-02T01:21:56+00:00'
+timestamp: '2024-02-03T02:28:12+00:00'
 requested_by: EdiJunior88
 provider: github
 branch: main
-detected_tools_count: 20
+detected_tools_count: 23
 tools:
 - name: TypeScript
   description: A superset of JavaScript that compiles to clean JavaScript output
@@ -19,6 +19,16 @@ tools:
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd
   detection_source: Repo Metadata
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd
+  detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
     functions
@@ -28,16 +38,6 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
-  detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd
-  detection_source: Repo Metadata
-- name: CSS 3
-  description: The latest evolution of the Cascading Style Sheets language
-  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
-  open_source: true
-  hosted_saas: false
-  category: Languages & Frameworks
-  sub_category: Languages
-  image_url: https://img.stackshare.io/service/6727/css.png
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd
   detection_source: Repo Metadata
 - name: Autoprefixer
@@ -77,8 +77,22 @@ tools:
   image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
   detection_source: app/package.json
-  last_updated_by: dependabot[bot]
-  last_updated_on: 2024-02-02 01:11:18.000000000 Z
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 23:16:18.000000000 Z
+- name: React Router
+  description: A complete routing solution for React.js
+  website_url: https://github.com/rackt/react-router
+  version: 6.22.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/3350/8261421.png
+  detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
+  detection_source: app/package.json
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 23:16:18.000000000 Z
 - name: Tailwind CSS
   description: A utility-first CSS framework for rapid UI development
   website_url: https://tailwindcss.com
@@ -91,7 +105,7 @@ tools:
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package.json
   detection_source: app/package.json
   last_updated_by: EdiJunior88
-  last_updated_on: 2024-01-31 16:38:24.000000000 Z
+  last_updated_on: 2024-02-02 14:23:16.000000000 Z
 - name: ESLint
   description: The fully pluggable JavaScript code quality tool
   website_url: http://eslint.org/
@@ -115,6 +129,20 @@ tools:
   image_url: https://img.stackshare.io/service/1046/git.png
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd
   detection_source: Repo Metadata
+- name: Prettier
+  description: 'Prettier is an opinionated code formatter. '
+  website_url: https://prettier.io/
+  version: 3.2.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
+  detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
+  detection_source: app/package.json
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 14:23:16.000000000 Z
 - name: Vite
   description: Native-ESM powered web dev build tool
   website_url: https://vitejs.dev/
@@ -166,8 +194,8 @@ tools:
   image_url: https://img.stackshare.io/package/15894/default_1d65e37e65b7f80761374f0202776043277d505d.png
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
   detection_source: app/package.json
-  last_updated_by: dependabot[bot]
-  last_updated_on: 2024-02-02 01:11:18.000000000 Z
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 23:16:18.000000000 Z
 - name: "@types/react-dom"
   description: TypeScript definitions for React
   package_url: https://www.npmjs.com/@types/react-dom
@@ -180,8 +208,8 @@ tools:
   image_url: https://img.stackshare.io/package/15946/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
   detection_source: app/package.json
-  last_updated_by: dependabot[bot]
-  last_updated_on: 2024-02-02 01:11:18.000000000 Z
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 23:16:18.000000000 Z
 - name: "@typescript-eslint/eslint-plugin"
   description: TypeScript plugin for ESLint
   package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
@@ -194,8 +222,8 @@ tools:
   image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
   detection_source: app/package.json
-  last_updated_by: dependabot[bot]
-  last_updated_on: 2024-02-02 01:11:18.000000000 Z
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 14:23:16.000000000 Z
 - name: "@typescript-eslint/parser"
   description: An ESLint custom parser which leverages TypeScript ESTree
   package_url: https://www.npmjs.com/@typescript-eslint/parser
@@ -222,8 +250,8 @@ tools:
   image_url: https://img.stackshare.io/package/16149/default_1f3a2fc7d882e29a43394ecdf491b8989ea3f0fa.png
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
   detection_source: app/package.json
-  last_updated_by: dependabot[bot]
-  last_updated_on: 2024-02-02 01:11:18.000000000 Z
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 23:16:18.000000000 Z
 - name: react-dom
   description: React package for working with the DOM
   package_url: https://www.npmjs.com/react-dom
@@ -236,8 +264,22 @@ tools:
   image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
   detection_source: app/package.json
-  last_updated_by: dependabot[bot]
-  last_updated_on: 2024-02-02 01:11:18.000000000 Z
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 23:16:18.000000000 Z
+- name: react-router-dom
+  description: DOM bindings for React Router
+  package_url: https://www.npmjs.com/react-router-dom
+  version: 6.22.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16025/default_e25d1fbb04a118c79fb444294461417342bd03bf.png
+  detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
+  detection_source: app/package.json
+  last_updated_by: EdiJunior88
+  last_updated_on: 2024-02-02 23:16:18.000000000 Z
 - name: tailwindcss
   description: A utility-first CSS framework for rapidly building custom user interfaces
   package_url: https://www.npmjs.com/tailwindcss
@@ -251,7 +293,7 @@ tools:
   detection_source_url: https://github.com/EdiJunior88/Igma_Teste_FrontEnd/blob/main/app/package-lock.json
   detection_source: app/package.json
   last_updated_by: EdiJunior88
-  last_updated_on: 2024-01-31 16:38:24.000000000 Z
+  last_updated_on: 2024-02-02 14:23:16.000000000 Z
 - name: vite
   description: Native-ESM powered web dev build tool
   package_url: https://www.npmjs.com/vite
