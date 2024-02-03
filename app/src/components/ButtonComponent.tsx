@@ -9,7 +9,12 @@ const ButtonComponent = ({
 }: InterfaceButtonComponent) => {
   return (
     <div>
-      <button type={type} className={className} disabled={disabled} onClick={onClick}>
+      <button
+        type={type}
+        className={className}
+        disabled={disabled}
+        onClick={onClick}
+      >
         {text}
       </button>
     </div>

@@ -43,7 +43,7 @@ function InfiniteLooper({
     if (heightDeficit) {
       setLooperInstances(
         (prevInstances) =>
-          prevInstances + Math.ceil(heightDeficit / instanceHeight) + 1
+          prevInstances + Math.ceil(heightDeficit / instanceHeight) + 1,
       );
     }
 
@@ -79,7 +79,8 @@ function InfiniteLooper({
             style={{
               animationDuration: `${speed}s`,
               animationDirection: direction === "down" ? "reverse" : "normal",
-            }}>
+            }}
+          >
             {children}
           </div>
         ))}
