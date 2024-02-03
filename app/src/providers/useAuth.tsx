@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 import { useUser, User } from "./useUser";
-import { useLocalStorage } from "./useLocalStorage";
 
 export const useAuth = () => {
   const [user, setUser] = useState<User | null>(null);
   const { addUser, removeUser } = useUser();
-  const { getItem } = useLocalStorage();
 
   useEffect(() => {
-    const user = getItem("user");
+    const user = localStorage.getItem("user");
+
     if (user) {
-      addUser(JSON.parse(user));
+      setUser(JSON.parse(user));
     }
-  }, [addUser, getItem]);
+  }, []);
 
   const login = (user: User) => {
+    localStorage.setItem("user", JSON.stringify(user));
     addUser(user);
   };
 
   const logout = () => {
+    localStorage.removeItem("user");
     removeUser();
   };
 
