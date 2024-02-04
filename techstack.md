@@ -45,7 +45,7 @@ Full tech stack [here](/techstack.md)
 
 ![](https://img.stackshare.io/repo.svg "repo") [EdiJunior88/Igma_Teste_FrontEnd](https://github.com/EdiJunior88/Igma_Teste_FrontEnd)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|23<br/>Tools used|02/03/24 <br/>Report generated|
+|23<br/>Tools used|02/04/24 <br/>Report generated|
 |------|------|
 
 </div>
@@ -54,14 +54,6 @@ Full tech stack [here](/techstack.md)
 
 <table><tr>
   <td align='center'>
-  <img width='36' height='36' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'>
-  <br>
-  <sub><a href="http://www.typescriptlang.org">TypeScript</a></sub>
-  <br>
-  <sub></sub>
-</td>
-
-<td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/6727/css.png' alt='CSS 3'>
   <br>
   <sub><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">CSS 3</a></sub>
@@ -73,6 +65,14 @@ Full tech stack [here](/techstack.md)
   <img width='36' height='36' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'>
   <br>
   <sub><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></sub>
+  <br>
+  <sub></sub>
+</td>
+
+<td align='center'>
+  <img width='36' height='36' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'>
+  <br>
+  <sub><a href="http://www.typescriptlang.org">TypeScript</a></sub>
   <br>
   <sub></sub>
 </td>
