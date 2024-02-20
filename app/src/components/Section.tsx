@@ -6,26 +6,29 @@ import { InterfaceFormik } from "@/Interface/Interface";
 import InputComponent from "./InputComponent";
 import ButtonComponent from "./ButtonComponent";
 import Gallery from "./Gallery";
+import GalleryMobile from "./GalleryMobile";
 
 /* Images */
 import ImageComponent from "./ImageComponent";
 import TextComponent from "./TextComponent";
 import Vector from "@/assets/vetorImage.svg";
 import ImageLavaSection from "@/assets/Image.webp";
-import LogoIgma from "@/assets/logotipoIgma.svg";
-import LogoAmbev from "@/assets/ambev.svg";
-import LogoBayer from "@/assets/bayer.svg";
-import LogoCentauro from "@/assets/centauro.svg";
-import LogoComgas from "@/assets/comgas.svg";
-import LogoCVC from "@/assets/cvc.svg";
-import LogoGoogle from "@/assets/google.svg";
-import LogoHonda from "@/assets/honda.svg";
-import LogoHSL from "@/assets/hsl.svg";
-import LogoIDB from "@/assets/idb.svg";
-import LogoMRV from "@/assets/mrv.svg";
-import LogoNeoEnergetica from "@/assets/neoenergia.svg";
 import Loading from "@/assets/loading.svg";
-import GalleryMobile from "./GalleryMobile";
+
+/* Logos */
+import LogoIgma from "@/assets/logotipoIgma.svg";
+import LogoAmbev from "@/assets/svg_logo/ambev.svg";
+import LogoBayer from "@/assets/svg_logo/bayer.svg";
+import LogoBrasilPrev from "@/assets/svg_logo/brasil-prev.svg";
+import LogoCentauro from "@/assets/svg_logo/centauro.svg";
+import LogoComgas from "@/assets/svg_logo/comgas.svg";
+import LogoCVC from "@/assets/svg_logo/cvc.svg";
+import LogoGoogle from "@/assets/svg_logo/google.svg";
+import LogoHonda from "@/assets/svg_logo/Honda.svg";
+import LogoIDB from "@/assets/svg_logo/IDB.svg";
+import LogoMRV from "@/assets/svg_logo/mrv.svg";
+import LogoNeoEnergia from "@/assets/svg_logo/neoenergia.svg";
+import LogoSirioLibanes from "@/assets/svg_logo/sirio-libanes.svg";
 
 const Section = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,15 +52,16 @@ const Section = () => {
   const images = [
     LogoAmbev,
     LogoBayer,
+    LogoBrasilPrev,
     LogoCentauro,
     LogoComgas,
     LogoCVC,
     LogoGoogle,
     LogoHonda,
-    LogoHSL,
     LogoIDB,
     LogoMRV,
-    LogoNeoEnergetica,
+    LogoNeoEnergia,
+    LogoSirioLibanes,
   ];
 
   return (
@@ -73,7 +77,7 @@ const Section = () => {
             <ImageComponent
               src={Vector}
               alt="vector svg"
-              className="absolute left-1.5 top-[202px] lg:left-[-18px] lg:top-[174px] lg:w-[60px] xl:top-[261px]"
+              className="absolute left-1.5 top-[202px] lg:left-1.5 lg:top-[174px] lg:w-[60px] xl:top-[261px]"
             />
           </div>
 
@@ -104,12 +108,13 @@ const Section = () => {
               className="pb-10 pt-20 text-base font-semibold leading-[150%] lg:pb-0 lg:pt-0 lg:text-left lg:text-base lg:font-semibold lg:leading-[150%] xl:text-2xl"
             />
           </div>
-          <div className="grid grid-cols-2 lg:grid lg:grid-flow-row-dense lg:auto-rows-auto lg:grid-cols-3 lg:content-center lg:items-start lg:justify-center">
+          <div className="grid grid-cols-2 items-center justify-center justify-items-center lg:grid lg:grid-flow-row-dense lg:auto-rows-auto lg:grid-cols-3 lg:content-center lg:items-start lg:justify-center">
             {images.map((image, index) => (
               <ImageComponent
                 key={index}
                 src={image}
                 alt={`logo empresa ${index + 1}`}
+                className="h-[124px] w-[124px] p-[15px] lg:h-[124px] lg:w-[170px] lg:p-[30px]"
               />
             ))}
           </div>
@@ -123,7 +128,7 @@ const Section = () => {
             />
             <TextComponent
               text={textDescriptionNewsletter}
-              className="pb-12 text-base font-semibold leading-[150%] lg:py-12 lg:pb-0 lg:text-left lg:text-base lg:font-semibold lg:leading-[150%] xl:text-2xl"
+              className="pb-12 text-base font-semibold leading-[150%] lg:py-12 lg:text-left lg:text-base lg:font-semibold lg:leading-[150%] xl:text-2xl"
             />
 
             <Formik
