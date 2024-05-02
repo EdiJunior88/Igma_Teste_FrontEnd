@@ -3,17 +3,17 @@
 ## Tech Stack
 EdiJunior88/Igma_Teste_FrontEnd is built on the following main stack:
 
-- [React](https://reactjs.org/) – Javascript UI Libraries
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [TypeScript](http://www.typescriptlang.org) – Languages
 - [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
-- [ESLint](http://eslint.org/) – Code Review
 - [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
+- [React](https://reactjs.org/) – Javascript UI Libraries
 - [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
-- [Prettier](https://prettier.io/) – Code Review
 - [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
-- [Formik](https://jaredpalmer.com/formik/) – Web Forms
+- [ESLint](http://eslint.org/) – Code Review
+- [Prettier](https://prettier.io/) – Code Review
 - [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
+- [Formik](https://jaredpalmer.com/formik/) – Web Forms
 
 Full tech stack [here](/techstack.md)
 
@@ -23,17 +23,17 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 EdiJunior88/Igma_Teste_FrontEnd is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'/> [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
-- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/3339/rlFcjEdI.png' alt='PostCSS'/> [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/3350/8261421.png' alt='React Router'/> [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
-- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png' alt='Tailwind CSS'/> [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/8846/preview.png' alt='Formik'/> [Formik](https://jaredpalmer.com/formik/) – Web Forms
+- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
+- <img width='25' height='25' src='https://img.stackshare.io/service/8846/preview.png' alt='Formik'/> [Formik](https://jaredpalmer.com/formik/) – Web Forms
 
 Full tech stack [here](/techstack.md)
 
@@ -42,16 +42,13 @@ Full tech stack [here](/techstack.md)
 <div align="center">
 
 # Tech Stack File
-
 ![](https://img.stackshare.io/repo.svg "repo") [EdiJunior88/Igma_Teste_FrontEnd](https://github.com/EdiJunior88/Igma_Teste_FrontEnd)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|23<br/>Tools used|02/04/24 <br/>Report generated|
+|23<br/>Tools used|05/02/24 <br/>Report generated|
 |------|------|
-
 </div>
 
 ## <img src='https://img.stackshare.io/languages.svg'/> Languages (3)
-
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/6727/css.png' alt='CSS 3'>
@@ -81,7 +78,6 @@ Full tech stack [here](/techstack.md)
 </table>
 
 ## <img src='https://img.stackshare.io/frameworks.svg'/> Frameworks (5)
-
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'>
@@ -112,7 +108,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="https://github.com/rackt/react-router">React Router</a></sub>
   <br>
-  <sub>v6.22.0</sub>
+  <sub>v6.23.0</sub>
 </td>
 
 <td align='center'>
@@ -127,7 +123,6 @@ Full tech stack [here](/techstack.md)
 </table>
 
 ## <img src='https://img.stackshare.io/devops.svg'/> DevOps (5)
-
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'>
@@ -150,7 +145,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="https://prettier.io/">Prettier</a></sub>
   <br>
-  <sub>v3.2.4</sub>
+  <sub>v3.2.5</sub>
 </td>
 
 <td align='center'>
@@ -173,7 +168,6 @@ Full tech stack [here](/techstack.md)
 </table>
 
 ## Other (1)
-
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/8846/preview.png' alt='Formik'>
@@ -186,21 +180,22 @@ Full tech stack [here](/techstack.md)
 </tr>
 </table>
 
+
 ## <img src='https://img.stackshare.io/group.svg' /> Open source packages (9)</h2>
 
 ## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (9)
 
-| NAME                                                                                       | VERSION  | LAST UPDATED | LAST UPDATED BY | LICENSE      | VULNERABILITIES |
-| :----------------------------------------------------------------------------------------- | :------- | :----------- | :-------------- | :----------- | :-------------- |
-| [@types/react](https://www.npmjs.com/@types/react)                                         | v18.2.51 | 02/02/24     | EdiJunior88     | MIT          | N/A             |
-| [@types/react-dom](https://www.npmjs.com/@types/react-dom)                                 | v18.2.18 | 02/02/24     | EdiJunior88     | MIT          | N/A             |
-| [@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin) | v6.20.0  | 02/02/24     | EdiJunior88     | MIT          | N/A             |
-| [@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)               | v6.20.0  | 02/02/24     | dependabot[bot] | BSD-2-Clause | N/A             |
-| [eslint-plugin-react-hooks](https://www.npmjs.com/eslint-plugin-react-hooks)               | v4.6.0   | 02/02/24     | EdiJunior88     | MIT          | N/A             |
-| [react-dom](https://www.npmjs.com/react-dom)                                               | v18.2.0  | 02/02/24     | EdiJunior88     | MIT          | N/A             |
-| [react-router-dom](https://www.npmjs.com/react-router-dom)                                 | v6.22.0  | 02/02/24     | EdiJunior88     | MIT          | N/A             |
-| [tailwindcss](https://www.npmjs.com/tailwindcss)                                           | v3.4.1   | 02/02/24     | EdiJunior88     | MIT          | N/A             |
-| [vite](https://www.npmjs.com/vite)                                                         | v5.0.12  | 01/31/24     | EdiJunior88     | N/A          | N/A             |
+|NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
+|:------|:------|:------|:------|:------|:------|
+|[@types/react](https://www.npmjs.com/@types/react)|v18.2.79|04/24/24|dependabot[bot] |MIT|N/A|
+|[@types/react-dom](https://www.npmjs.com/@types/react-dom)|v18.2.25|04/24/24|dependabot[bot] |MIT|N/A|
+|[@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin)|v7.7.1|04/24/24|dependabot[bot] |MIT|N/A|
+|[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v7.7.1|04/24/24|dependabot[bot] |BSD-2-Clause|N/A|
+|[eslint-plugin-react-hooks](https://www.npmjs.com/eslint-plugin-react-hooks)|v4.6.0|04/24/24|dependabot[bot] |MIT|N/A|
+|[react-dom](https://www.npmjs.com/react-dom)|v18.2.0|04/24/24|dependabot[bot] |MIT|N/A|
+|[react-router-dom](https://www.npmjs.com/react-router-dom)|v6.23.0|04/24/24|dependabot[bot] |MIT|N/A|
+|[tailwindcss](https://www.npmjs.com/tailwindcss)|v3.4.3|04/22/24|dependabot[bot] |MIT|N/A|
+|[vite](https://www.npmjs.com/vite)|v5.2.10|04/22/24|dependabot[bot] |N/A|N/A|
 
 <br/>
 <div align='center'>
