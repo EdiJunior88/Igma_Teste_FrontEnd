@@ -29,6 +29,7 @@
 <h3>Tecnologias Utilizadas</h3>
 
 ## Tech Stack
+
 EdiJunior88/Igma_Teste_FrontEnd is built on the following main stack:
 
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
